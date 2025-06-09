@@ -494,16 +494,22 @@ class MedicalImageAnalyzer(Component):
         # How close is center value to mean
         center_deviation = abs(center_value - mean) / std
         
-        # Coefficient of variation
+        # Coefficient of variation (normalized)
         cv = std / (abs(mean) + 1e-6)
         
-        # Lower CV = more homogeneous = higher confidence
-        # Also consider if center value is close to mean
-        confidence = max(0.0, min(1.0, 1.0 - cv))
+        # Base confidence from homogeneity (sigmoid-like transformation)
+        # CV of 0.1 = ~95% confidence, CV of 0.5 = ~70% confidence, CV of 1.0 = ~50% confidence
+        base_confidence = 1.0 / (1.0 + cv * 2.0)
         
-        # Reduce confidence if center is far from mean
-        if center_deviation > 2:  # More than 2 standard deviations
-            confidence *= 0.8
+        # Adjust based on center deviation
+        # If center is close to mean, increase confidence
+        deviation_factor = 1.0 / (1.0 + center_deviation * 0.5)
+        
+        # Combine factors
+        confidence = base_confidence * 0.7 + deviation_factor * 0.3
+        
+        # Ensure reasonable minimum confidence for valid detections
+        confidence = max(0.5, min(0.99, confidence))
         
         return round(confidence, 2)
     

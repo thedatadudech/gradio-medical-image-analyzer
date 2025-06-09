@@ -1,4 +1,3 @@
-
 ---
 title: Medical Image Analyzer Component
 emoji: 🏥
@@ -6,7 +5,7 @@ colorFrom: blue
 colorTo: green
 sdk: gradio
 sdk_version: 5.33.0
-app_file: demo/app.py
+app_file: app.py
 pinned: false
 license: apache-2.0
 tags:
@@ -18,32 +17,9 @@ tags:
 ---
 
 # `gradio_medical_image_analyzer`
-<img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.0.1%20-%20orange"> <a href="https://github.com/markusclauss/gradio-medical-image-analyzer/issues" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Issues-white?logo=github&logoColor=black"></a> 
+<a href="https://pypi.org/project/gradio_medical_image_analyzer/" target="_blank"><img alt="PyPI - Version" src="https://img.shields.io/pypi/v/gradio_medical_image_analyzer"></a> <a href="https://github.com/thedatadudech/gradio-medical-image-analyzer/issues" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Issues-white?logo=github&logoColor=black"></a> <a href="https://huggingface.co/spaces/AbdullahIsaMarkus/gradio_medical_image_analyzer/discussions" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%A4%97%20Discuss-%23097EFF?style=flat&logoColor=black"></a>
 
-AI-agent optimized medical image analysis component for Gradio
-
-## ⚠️ IMPORTANT MEDICAL DISCLAIMER ⚠️
-
-**THIS SOFTWARE IS FOR RESEARCH AND EDUCATIONAL PURPOSES ONLY**
-
-🚨 **DO NOT USE FOR CLINICAL DIAGNOSIS OR MEDICAL DECISION MAKING** 🚨
-
-This component is in **EARLY DEVELOPMENT** and is intended as a **proof of concept** for medical image analysis integration with Gradio. The results produced by this software:
-
-- **ARE NOT** validated for clinical use
-- **ARE NOT** FDA approved or CE marked
-- **SHOULD NOT** be used for patient diagnosis or treatment decisions
-- **SHOULD NOT** replace professional medical judgment
-- **MAY CONTAIN** significant errors or inaccuracies
-- **ARE PROVIDED** without any warranty of accuracy or fitness for medical purposes
-
-**ALWAYS CONSULT QUALIFIED HEALTHCARE PROFESSIONALS** for medical image interpretation and clinical decisions. This software is intended solely for:
-- Research and development purposes
-- Educational demonstrations
-- Technical integration testing
-- Non-clinical experimental use
-
-By using this software, you acknowledge that you understand these limitations and agree not to use it for any clinical or medical diagnostic purposes.
+AI-agent optimized medical image analysis component for Gradio with DICOM support
 
 ## Installation
 
@@ -1018,9 +994,4 @@ The code snippet below is accurate in cases where the component is used as both 
  ) -> typing.Dict[str, typing.Any][str, typing.Any]:
      return value
  ```
-
----
-
-Developed for veterinary medicine with ❤️ and cutting-edge web technology
-
-**Gradio Agents & MCP Hackathon 2025 - Track 2 Submission**
+ 
