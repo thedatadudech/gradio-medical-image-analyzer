@@ -1,0 +1,60 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-requirements-txt",
+  "hatch-fancy-pypi-readme>=22.5.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "gradio_medical_image_analyzer"
+version = "0.0.1"
+description = "AI-agent optimized medical image analysis component for Gradio"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.8"
+authors = [{ name = "Markus Clauss Vetsuisse Uni Zurich", email = "markus@data-and-ai-dude.ch" }]
+keywords = [
+  "gradio-custom-component",
+  "medical-imaging",
+  "ai-agents",
+  "image-analysis",
+  "gradio-template-MedicalImageAnalyzer"
+]
+# Add dependencies here
+dependencies = [
+  "gradio>=4.0,<6.0",
+  "numpy>=1.21.0",
+  "pillow>=10.0.0",
+  "scikit-image>=0.19.0",
+  "scipy>=1.7.0",
+  "opencv-python>=4.5.0",
+  "pydicom>=2.3.0"
+]
+classifiers = [
+  'Development Status :: 3 - Alpha',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Topic :: Scientific/Engineering :: Medical Science Apps.',
+  'Topic :: Scientific/Engineering :: Artificial Intelligence',
+]
+
+[project.urls]
+repository = "https://github.com/datadudech/gradio-medical-image-analyzer"
+documentation = "https://github.com/datadudech/gradio-medical-image-analyzer#readme"
+issues = "https://github.com/datadudech/gradio-medical-image-analyzer/issues"
+space = "https://huggingface.co/spaces/abdullahisamarkus/medical-image-analyzer"
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.hatch.build]
+artifacts = ["/backend/gradio_medical_image_analyzer/templates", "*.pyi"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["/backend/gradio_medical_image_analyzer"]
