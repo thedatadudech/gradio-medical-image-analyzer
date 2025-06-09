@@ -21,10 +21,10 @@ with gr.Blocks(
 # `gradio_medical_image_analyzer`
 
 <div style="display: flex; gap: 7px;">
-<img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.0.1%20-%20orange"> <a href="https://github.com/yourusername/gradio-medical-image-analyzer/issues" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Issues-white?logo=github&logoColor=black"></a> 
+<img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.1.0%20-%20orange"> <a href="https://github.com/thedatadudech/gradio-medical-image-analyzer/issues" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Issues-white?logo=github&logoColor=black"></a> <a href="https://huggingface.co/spaces/AbdullahIsaMarkus/gradio_medical_image_analyzer/discussions" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/%F0%9F%A4%97%20Discuss-%23097EFF?style=flat&logoColor=black"></a>
 </div>
 
-AI-agent optimized medical image analysis component for Gradio
+AI-agent optimized medical image analysis component for Gradio with DICOM support
 """, elem_classes=["md-custom"], header_links=True)
     app.render()
     gr.Markdown(
